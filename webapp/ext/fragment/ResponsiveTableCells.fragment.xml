@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" 
+    xmlns="sap.m"
+	controllerName="zixxilcptaccv7.ext.controller.ListReportExtension">
+	<!--Column 1 Cell-->
+	<Text text="{rbukrs}"/>
+	<!--Column 2 Cell-->
+	<Button id="EditButton"  text="Edit" press="onEdit"/>
+</core:FragmentDefinition>
