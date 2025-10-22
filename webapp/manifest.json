@@ -1,195 +1,195 @@
 {
-    "_version": "1.60.0",
-    "sap.app": {
-        "id": "zixxilcptaccv7",
-        "type": "application",
-        "i18n": "i18n/i18n.properties",
-        "applicationVersion": {
-            "version": "0.0.1"
-        },
-        "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
-        "resources": "resources.json",
-        "sourceTemplate": {
-            "id": "@sap/generator-fiori:lrop",
-            "version": "1.19.1",
-            "toolsId": "4845b15d-fece-468e-bc23-92c37779eacd"
-        },
-        "dataSources": {
-            "ZIXX_ILC_PTACC_ANNO_MDL": {
-                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/",
-                "type": "ODataAnnotation",
-                "settings": {
-                    "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
-                }
-            },
-            "annotation": {
-                "type": "ODataAnnotation",
-                "uri": "annotations/annotation.xml",
-                "settings": {
-                    "localUri": "annotations/annotation.xml"
-                }
-            },
-            "mainService": {
-                "uri": "/sap/opu/odata/sap/ZIXX_ILC_PTACC_SRV/",
-                "type": "OData",
-                "settings": {
-                    "annotations": [
-                        "ZIXX_ILC_PTACC_ANNO_MDL",
-                        "annotation"
-                    ],
-                    "localUri": "localService/mainService/metadata.xml",
-                    "odataVersion": "2.0"
-                }
-            }
-        }
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "zixxilcptaccv7",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
     },
-    "sap.ui": {
-        "technology": "UI5",
-        "icons": {
-            "icon": "",
-            "favIcon": "",
-            "phone": "",
-            "phone@2": "",
-            "tablet": "",
-            "tablet@2": ""
-        },
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
-        }
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.19.1",
+      "toolsId": "4845b15d-fece-468e-bc23-92c37779eacd"
     },
-    "sap.ui5": {
-        "flexEnabled": false,
-        "dependencies": {
-            "minUI5Version": "1.120.23",
-            "libs": {
-                "sap.m": {},
-                "sap.ui.core": {},
-                "sap.ushell": {},
-                "sap.f": {},
-                "sap.ui.comp": {},
-                "sap.ui.generic.app": {},
-                "sap.suite.ui.generic.template": {}
-            }
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        },
-        "models": {
-            "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "settings": {
-                    "bundleName": "zixxilcptaccv7.i18n.i18n"
-                }
-            },
-            "": {
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {
-                    "defaultBindingMode": "TwoWay",
-                    "defaultCountMode": "Inline",
-                    "refreshAfterChange": false,
-                    "metadataUrlParams": {
-                        "sap-value-list": "none"
-                    }
-                }
-            },
-            "@i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
-            }
-        },
-        "resources": {
-            "css": []
-        },
-        "routing": {
-            "config": {},
-            "routes": [],
-            "targets": {}
-        },
-        "extends": {
-            "extensions": {
-                "sap.ui.viewExtensions": {
-                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "ResponsiveTableColumnsExtension|ZIXX_ILC_PTACC_V": {
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableColumns",
-                            "type": "XML"
-                        },
-                        "ResponsiveTableCellsExtension|ZIXX_ILC_PTACC_V": {
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableCells",
-                            "type": "XML"
-                        }
-                    },
-                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {}
-                },
-                "sap.ui.controllerExtensions": {
-                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "controllerName": "zixxilcptaccv7.ext.controller.ListReportExtension",
-                        "sap.ui.generic.app": {
-                            "ZIXX_ILC_PTACC_V": {
-                                "EntitySet": "ZIXX_ILC_PTACC_V",
-                                "Actions": {
-                                    "Editar": {
-                                        "id": "EditarButton",
-                                        "text": "Editarte",
-                                        "press": "Edit",
-                                        "global": true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "sap.ui.generic.app": {
-        "_version": "1.3.0",
+    "dataSources": {
+      "ZIXX_ILC_PTACC_ANNO_MDL": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/",
+        "type": "ODataAnnotation",
         "settings": {
-            "forceGlobalRefresh": false,
-            "objectPageHeaderType": "Dynamic",
-            "considerAnalyticalParameters": true,
-            "showDraftToggle": false
+          "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
+        }
+      },
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      },
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZIXX_ILC_PTACC_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [
+            "ZIXX_ILC_PTACC_ANNO_MDL",
+            "annotation"
+          ],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.23",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.f": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.suite.ui.generic.template": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zixxilcptaccv7.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false,
+          "metadataUrlParams": {
+            "sap-value-list": "none"
+          }
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [],
+      "targets": {}
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.viewExtensions": {
+          "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+            "ResponsiveTableColumnsExtension|ZIXX_ILC_PTACC_V": {
+              "className": "sap.ui.core.Fragment",
+              "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableColumns",
+              "type": "XML"
+            },
+            "ResponsiveTableCellsExtension|ZIXX_ILC_PTACC_V": {
+              "className": "sap.ui.core.Fragment",
+              "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableCells",
+              "type": "XML"
+            }
+          },
+          "sap.suite.ui.generic.template.ObjectPage.view.Details": {}
+        },
+        "sap.ui.controllerExtensions": {
+          "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+            "controllerName": "zixxilcptaccv7.ext.controller.ListReportExtension",
+            "sap.ui.generic.app": {
+              "ZIXX_ILC_PTACC_V": {
+                "EntitySet": "ZIXX_ILC_PTACC_V",
+                "Actions": {
+                  "Editar": {
+                    "id": "EditarButton",
+                    "text": "Editarte",
+                    "press": "Edit",
+                    "global": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.ui.generic.app": {
+    "_version": "1.3.0",
+    "settings": {
+      "forceGlobalRefresh": false,
+      "objectPageHeaderType": "Dynamic",
+      "considerAnalyticalParameters": true,
+      "showDraftToggle": false
+    },
+    "pages": {
+      "ListReport|ZIXX_ILC_PTACC_V": {
+        "entitySet": "ZIXX_ILC_PTACC_V",
+        "component": {
+          "name": "sap.suite.ui.generic.template.ListReport",
+          "list": true,
+          "settings": {
+            "condensedTableLayout": true,
+            "smartVariantManagement": true,
+            "enableTableFilterInPageVariant": true,
+            "filterSettings": {
+              "dateSettings": {
+                "useDateRange": true
+              }
+            },
+            "tableSettings": {
+              "type": "ResponsiveTable"
+            }
+          }
         },
         "pages": {
-            "ListReport|ZIXX_ILC_PTACC_V": {
-                "entitySet": "ZIXX_ILC_PTACC_V",
-                "component": {
-                    "name": "sap.suite.ui.generic.template.ListReport",
-                    "list": true,
-                    "settings": {
-                        "condensedTableLayout": true,
-                        "smartVariantManagement": true,
-                        "enableTableFilterInPageVariant": true,
-                        "filterSettings": {
-                            "dateSettings": {
-                                "useDateRange": true
-                            }
-                        },
-                        "tableSettings": {
-                            "type": "ResponsiveTable"
-                        }
-                    }
-                },
-                "pages": {
-                    "ObjectPage|ZIXX_ILC_PTACC_V": {
-                        "entitySet": "ZIXX_ILC_PTACC_V",
-                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
-                        "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
-                        }
-                    }
-                }
+          "ObjectPage|ZIXX_ILC_PTACC_V": {
+            "entitySet": "ZIXX_ILC_PTACC_V",
+            "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+            "component": {
+              "name": "sap.suite.ui.generic.template.ObjectPage"
             }
+          }
         }
-    },
-    "sap.fiori": {
-        "registrationIds": [],
-        "archeType": "transactional"
+      }
     }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
 }
