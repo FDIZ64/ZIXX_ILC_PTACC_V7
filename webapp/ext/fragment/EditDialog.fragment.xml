@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog
+    id="editDialog"
+    title="Editar Cliente">
+    
+    <VBox class="sapUiSmallMargin">
+      <Label text="Legal entity"/>
+      <Input value="{localModel>/rbukrs}" width="100%"/>
+
+      <Label text="Account"/>
+      <Input value="{localModel>/racct}" width="100%"/>
+
+      <Label text="OC"/>
+      <Input value="{localModel>/ebeln}" width="100%"/>
+    </VBox>
+
+    <endButton>
+      <Button text="Cancelar" press=".onCancelDialog"/>
+    </endButton>
+    <beginButton>
+      <Button text="Guardar" type="Accept" press=".onSaveDialog"/>
+    </beginButton>
+  </Dialog>
+</core:FragmentDefinition>
