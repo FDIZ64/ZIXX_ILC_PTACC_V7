@@ -48,7 +48,7 @@ sap.ui.define([
             const oLocalData = oView.getModel("localModel").getData();
 
             // Construir path del registro
-            const sPath = oModel.createKey("/ZIXX_ILC_PTACC_V", {
+            const sPath = oModel.createKey("/ZV_IXX_IL_CPTACC_V", {
                 rbukrs: oLocalData.rbukrs,
                 racct: oLocalData.racct,
                 gjahr: oLocalData.gjahr,

@@ -4,8 +4,8 @@
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "SAP System (ABAP On-Premise)",
     "metadataFilename": "",
-    "serviceUrl": "http://besr4d/sap/opu/odata/sap/ZIXX_ILC_PTACC_SRV",
-    "appName": "zixx_ilc_ptacc_v7",
+    "serviceUrl": "http://besr4d/sap/opu/odata/sap/ZV_IXX_IL_CPTACC_SRV",
+    "appName": "ZV_IXX_IL_CPTACC_v7",
     "appTitle": "App Title",
     "appDescription": "An SAP Fiori application.",
     "appNamespace": "",
@@ -21,7 +21,7 @@
     "entityRelatedConfig": [
       {
         "type": "Main Entity",
-        "value": "ZIXX_ILC_PTACC_V"
+        "value": "ZV_IXX_IL_CPTACC_V"
       }
     ],
     "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"

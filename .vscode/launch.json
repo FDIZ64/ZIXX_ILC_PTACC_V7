@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Start zixx_ilc_ptacc_v7",
+      "name": "Start ZV_IXX_IL_CPTACC_v7",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -24,11 +24,11 @@
       "env": {
         "DEBUG": "--inspect",
         "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zixx_ilc_ptacc_v7\"}"
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ZV_IXX_IL_CPTACC_v7\"}"
       }
     },
     {
-      "name": "Start zixx_ilc_ptacc_v7 Mock",
+      "name": "Start ZV_IXX_IL_CPTACC_v7 Mock",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -51,11 +51,11 @@
       "outputCapture": "std",
       "env": {
         "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zixx_ilc_ptacc_v7\"}"
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ZV_IXX_IL_CPTACC_v7\"}"
       }
     },
     {
-      "name": "Start zixx_ilc_ptacc_v7 Local",
+      "name": "Start ZV_IXX_IL_CPTACC_v7 Local",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -78,7 +78,7 @@
       "outputCapture": "std",
       "env": {
         "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zixx_ilc_ptacc_v7\"}"
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ZV_IXX_IL_CPTACC_v7\"}"
       }
     }
   ]

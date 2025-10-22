@@ -7,8 +7,8 @@
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V2|
 |**Service Type**<br>SAP System (ABAP On-Premise)|
-|**Service URL**<br>http://besr4d/sap/opu/odata/sap/ZIXX_ILC_PTACC_SRV|
-|**Module Name**<br>zixx_ilc_ptacc_v7|
+|**Service URL**<br>http://besr4d/sap/opu/odata/sap/ZV_IXX_IL_CPTACC_SRV|
+|**Module Name**<br>ZV_IXX_IL_CPTACC_v7|
 |**Application Title**<br>App Title|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
@@ -16,9 +16,9 @@
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>ZIXX_ILC_PTACC_V|
+|**Main Entity**<br>ZV_IXX_IL_CPTACC_V|
 
-## zixx_ilc_ptacc_v7
+## ZV_IXX_IL_CPTACC_v7
 
 An SAP Fiori application.
 

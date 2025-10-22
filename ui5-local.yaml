@@ -47,5 +47,7 @@ server:
             mockdataPath: ./webapp/localService/mainService/data
             generateMockData: true
         annotations:
+          - localPath: ./webapp/localService/mainService/ZIXX_ILC_CPTACC_ANNO_MDL.xml
+            urlPath: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_CPTACC_ANNO_MDL',Version='0001')/$value/
           - localPath: ./webapp/localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml
             urlPath: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/

@@ -16,11 +16,11 @@
       "toolsId": "4845b15d-fece-468e-bc23-92c37779eacd"
     },
     "dataSources": {
-      "ZIXX_ILC_PTACC_ANNO_MDL": {
-        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/",
+      "ZV_IXX_IL_CPTACC_ANNO_MDL": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_CPTACC_ANNO_MDL',Version='0001')/$value/",
         "type": "ODataAnnotation",
         "settings": {
-          "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
+          "localUri": "localService/mainService/ZIXX_ILC_CPTACC_ANNO_MDL.xml"
         }
       },
       "annotation": {
@@ -40,6 +40,13 @@
           ],
           "localUri": "localService/mainService/metadata.xml",
           "odataVersion": "2.0"
+        }
+      },
+      "ZIXX_ILC_PTACC_ANNO_MDL": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/",
+        "type": "ODataAnnotation",
+        "settings": {
+          "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
         }
       }
     }
@@ -114,12 +121,12 @@
       "extensions": {
         "sap.ui.viewExtensions": {
           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-            "ResponsiveTableColumnsExtension|ZIXX_ILC_PTACC_V": {
+            "ResponsiveTableColumnsExtension|ZV_IXX_IL_CPTACCSet": {
               "className": "sap.ui.core.Fragment",
               "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableColumns",
               "type": "XML"
             },
-            "ResponsiveTableCellsExtension|ZIXX_ILC_PTACC_V": {
+            "ResponsiveTableCellsExtension|ZV_IXX_IL_CPTACCSet": {
               "className": "sap.ui.core.Fragment",
               "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableCells",
               "type": "XML"
@@ -131,8 +138,8 @@
           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
             "controllerName": "zixxilcptaccv7.ext.controller.ListReportExtension",
             "sap.ui.generic.app": {
-              "ZIXX_ILC_PTACC_V": {
-                "EntitySet": "ZIXX_ILC_PTACC_V",
+              "ZV_IXX_IL_CPTACCSet": {
+                "EntitySet": "ZV_IXX_IL_CPTACCSet",
                 "Actions": {
                   "Editar": {
                     "id": "EditarButton",
@@ -157,8 +164,8 @@
       "showDraftToggle": false
     },
     "pages": {
-      "ListReport|ZIXX_ILC_PTACC_V": {
-        "entitySet": "ZIXX_ILC_PTACC_V",
+      "ListReport|ZV_IXX_IL_CPTACCSet": {
+        "entitySet": "ZV_IXX_IL_CPTACCSet",
         "component": {
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
@@ -177,8 +184,8 @@
           }
         },
         "pages": {
-          "ObjectPage|ZIXX_ILC_PTACC_V": {
-            "entitySet": "ZIXX_ILC_PTACC_V",
+          "ObjectPage|ZV_IXX_IL_CPTACCSet": {
+            "entitySet": "ZV_IXX_IL_CPTACCSet",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage"

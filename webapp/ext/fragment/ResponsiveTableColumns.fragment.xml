@@ -5,7 +5,7 @@
 		<Text text="Legal Entity" />
 		<customData>
 			<core:CustomData key="p13nData"
-				value='\{"columnKey": "CustomColumn1", "leadingProperty":"belnr", "columnIndex" : "101"}' />
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"BELNR", "columnIndex" : "101"}' />
 		</customData>
 	</Column>
 	<!--Column 2 Header-->
@@ -13,7 +13,7 @@
 		<!-- <Text text="Legal Entity" /> -->
 		<customData>
 			<core:CustomData key="p13nData"
-				value='\{"columnKey": "CustomColumn1", "leadingProperty":"belnr", "columnIndex" : "101"}' />
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"BELNR", "columnIndex" : "101"}' />
 		</customData>
 	</Column>
 </core:FragmentDefinition>

@@ -2,7 +2,7 @@
     xmlns="sap.m"
 	controllerName="zixxilcptaccv7.ext.controller.ListReportExtension">
 	<!--Column 1 Cell-->
-	<Text text="{rbukrs}"/>
+	<Text text="{RBUKRS}"/>
 	<!--Column 2 Cell-->
 	<Button id="EditButton"  text="Edit" press="onEdit"/>
 </core:FragmentDefinition>
