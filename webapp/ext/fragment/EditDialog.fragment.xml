@@ -5,13 +5,31 @@
     
     <VBox class="sapUiSmallMargin">
       <Label text="Legal entity"/>
-      <Input value="{localModel>/rbukrs}" width="100%"/>
+      <Input value="{localModel>/RBUKRS}" width="100%" editable="false"/>
 
       <Label text="Account"/>
-      <Input value="{localModel>/racct}" width="100%"/>
+      <Input value="{localModel>/RACCT}" width="100%" editable="false"/>
 
       <Label text="OC"/>
-      <Input value="{localModel>/ebeln}" width="100%"/>
+      <Input value="{localModel>/GJAHR}" width="100%" editable="false"/>
+      <Label text="FI DOC"/>
+      <Input value="{localModel>/BELNR}" width="100%" editable="false"/>
+      <Label text="POS"/>
+      <Input value="{localModel>/BUZEI}" width="100%" editable="false"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/EBELN}" width="100%"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/EBELP}" width="100%"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/MATNR}" width="100%"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/STATUS}" width="100%"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/ISSUE_DES}" width="100%"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/ACT_PLA_NEX_STE}" width="100%"/>
+      <Label text="OC"/>
+      <Input value="{localModel>/EXP_RES}" width="100%"/>
     </VBox>
 
     <endButton>

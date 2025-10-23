@@ -1,19 +1,79 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
 	xmlns="sap.m">
-	<!--Column 1 Header-->
-	<Column id="textColumn">
-		<Text text="Legal Entity" />
+	<Column width="50px">
 		<customData>
 			<core:CustomData key="p13nData"
-				value='\{"columnKey": "CustomColumn1", "leadingProperty":"BELNR", "columnIndex" : "101"}' />
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"CRITICAL", "columnIndex" : "010"}' />
 		</customData>
 	</Column>
-	<!--Column 2 Header-->
-	<Column id="textEdit">
-		<!-- <Text text="Legal Entity" /> -->
+	<Column width="100px">
+		<Text text="Company Code" />
 		<customData>
 			<core:CustomData key="p13nData"
-				value='\{"columnKey": "CustomColumn1", "leadingProperty":"BELNR", "columnIndex" : "101"}' />
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"RBUKRS", "columnIndex" : "101"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="G/L Account Number" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"RACCT", "columnIndex" : "120"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Fiscal Year" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"GJAHR", "columnIndex" : "130"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Document Number of an Accounting Document" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"BELNR", "columnIndex" : "140"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Number of Line Item Within Accounting Document" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"BUZEI", "columnIndex" : "150"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Purchasing Document Number" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"EBELN", "columnIndex" : "160"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Item Number of Purchasing Document" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"EBELP", "columnIndex" : "170"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Material Number" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"MATNR", "columnIndex" : "180"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Issue Description" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"ISSUE_DES", "columnIndex" : "200"}' />
+		</customData>
+	</Column>
+	<Column width="100px">
+		<Text text="Action Plan/Next Steps" />
+		<customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "CustomColumn1", "leadingProperty":"ACT_PLA_NEX_STE", "columnIndex" : "210"}' />
 		</customData>
 	</Column>
 </core:FragmentDefinition>

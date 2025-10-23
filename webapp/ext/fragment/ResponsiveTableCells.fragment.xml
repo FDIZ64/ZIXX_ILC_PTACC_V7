@@ -1,8 +1,15 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" 
-    xmlns="sap.m"
+    xmlns="sap.m" xmlns:t="sap.m.Text"
 	controllerName="zixxilcptaccv7.ext.controller.ListReportExtension">
-	<!--Column 1 Cell-->
+	<Button id="EditButton" icon="sap-icon://edit" press="onEdit" type="Accept"/>
 	<Text text="{RBUKRS}"/>
-	<!--Column 2 Cell-->
-	<Button id="EditButton"  text="Edit" press="onEdit"/>
+	<Text text="{RACCT}"/>
+	<Text text="{GJAHR}"/>
+	<Text text="{BELNR}"/>
+	<Text text="{BUZEI}"/>
+	<Text text="{EBELN}"/>
+	<Text text="{EBELP}"/>
+	<Text text="{ISSUE_DES}"/>
+	<Text text="{ACT_PLA_NEX_STE}"/>
+	<Text text="{EXP_RES}"/>
 </core:FragmentDefinition>

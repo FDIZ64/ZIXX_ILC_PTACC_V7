@@ -11,7 +11,6 @@ sap.ui.define([
             MessageToast.show("Custom handler invoked.");
         },
         onEdit: async function (oEvent) {
-            MessageToast.show("editor invoked.");
             debugger;
             const oView = this.getView();
             const oContext = oEvent.getSource().getBindingContext();
@@ -48,12 +47,12 @@ sap.ui.define([
             const oLocalData = oView.getModel("localModel").getData();
 
             // Construir path del registro
-            const sPath = oModel.createKey("/ZV_IXX_IL_CPTACC_V", {
-                rbukrs: oLocalData.rbukrs,
-                racct: oLocalData.racct,
-                gjahr: oLocalData.gjahr,
-                belnr: oLocalData.belnr,
-                buzei: oLocalData.buzei
+            const sPath = oModel.createKey("/ZV_IXX_IL_CPTACCSet", {
+                RBUKRS: oLocalData.RBUKRS,
+                RACCT: oLocalData.RACCT,
+                GJAHR: oLocalData.GJAHR,
+                BELNR: oLocalData.BELNR,
+                BUZEI: oLocalData.BUZEI
             });
         // Actualizar entidad vía OData
         oModel.update(sPath, oLocalData, {
