@@ -23,6 +23,17 @@
           "localUri": "localService/mainService/ZIXX_ILC_CPTACC_ANNO_MDL.xml"
         }
       },
+      "MaterialVHService": {
+        "uri": "/sap/opu/odata/sap/ZI_IXX_ILC_MATNR_VH_CDS/",
+        "type": "OData",
+        "settings": {
+          "annotations": [
+            "ZI_IXX_ILC_MATNR_VH_CDS_VAN"
+          ],
+          "localUri": "localService/MaterialVHService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
       "annotation": {
         "type": "ODataAnnotation",
         "uri": "annotations/annotation.xml",
@@ -47,6 +58,13 @@
         "type": "ODataAnnotation",
         "settings": {
           "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
+        }
+      },
+      "ZI_IXX_ILC_MATNR_VH_CDS_VAN": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZI_IXX_ILC_MATNR_VH_CDS_VAN',Version='0001')/$value/",
+        "type": "ODataAnnotation",
+        "settings": {
+          "localUri": "localService/MaterialVHService/ZI_IXX_ILC_MATNR_VH_CDS_VAN.xml"
         }
       }
     }
@@ -104,9 +122,22 @@
           }
         }
       },
+      "MaterialVH": {
+        "dataSource": "MaterialVHService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "useBatch": true
+        }
+      },
       "@i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "uri": "i18n/i18n.properties"
+      },
+      "MaterialVHService": {
+        "dataSource": "MaterialVHService",
+        "preload": true,
+        "settings": {}
       }
     },
     "resources": {

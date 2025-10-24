@@ -1,9 +1,14 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:sf="sap.ui.comp.smartfilterbar"
+  xmlns:smartTable="sap.ui.comp.smarttable"
+  controllerName="ext.controller.ListReportExtension">
   <Dialog
     id="editDialog"
     title="Editar Cliente">
     
     <VBox class="sapUiSmallMargin">
+    
       <Label text="Legal entity"/>
       <Input value="{localModel>/RBUKRS}" width="100%" editable="false"/>
 
@@ -21,7 +26,16 @@
       <Label text="OC"/>
       <Input value="{localModel>/EBELP}" width="100%"/>
       <Label text="OC"/>
-      <Input value="{localModel>/MATNR}" width="100%"/>
+      <HBox>
+        <Input
+            id="materialInput"
+            width="200px"
+            value="{localModel>/MATNR}"
+            placeholder="Material" />
+        <Button
+            text="Buscar"
+            press=".onOpenMaterialFilter" />
+      </HBox>
       <Label text="OC"/>
       <Input value="{localModel>/STATUS}" width="100%"/>
       <Label text="OC"/>

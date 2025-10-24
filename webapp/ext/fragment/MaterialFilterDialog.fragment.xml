@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:smb="sap.ui.comp.smartfilterbar"
+    xmlns:st="sap.ui.comp.smarttable">
+
+  <Dialog
+      id="materialFilterDialog"
+      title="Buscar Material"
+      draggable="true"
+      resizable="true"
+      contentHeight="400px"
+      contentWidth="500px">
+
+    <VBox class="sapUiSmallMargin">
+
+      <!-- SmartFilterBar para filtrar materiales -->
+      <smb:SmartFilterBar
+          id="sfbMaterials"
+          entitySet="MATNRSet"
+          persistencyKey="SmartFilterMaterial" 
+          enableBasicSearch="true"
+          search=".onSearchMaterial"/>
+
+        <st:SmartTable
+                id="tblMaterials"
+                smartFilterId="sfbMaterials"
+                entitySet="MATNRSet"
+                tableType="ResponsiveTable"
+                header="Lista de Materiales"
+                showRowCount="true"
+                enableAutoBinding="false"
+                useVariantManagement="false">
+                <Table id="materialTable"
+                    mode="SingleSelectLeft"
+                    growing="true"
+                    growingScrollToLoad="true" />
+                </st:SmartTable>
+    </VBox>
+
+    <buttons>
+      <!-- <Button text="Aceptar" press=".onConfirmMaterial"/> -->
+      <Button text="Cancelar" press=".onCloseMaterialDialog"/>
+    </buttons>
+
+  </Dialog>
+
+</core:FragmentDefinition>
