@@ -67,6 +67,8 @@
                 <Property Name="Maktg" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="Spras" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="ZV_IXX_IL_CPTAV3Set" Relationship="ZIXX_ILC_PTACC_SRV.MATNR_CPTAV3_ASOC" FromRole="FromRole_MATNR_CPTAV3_ASOC" ToRole="ToRole_MATNR_CPTAV3_ASOC"/>
+                <NavigationProperty Name="ZV_IXX_IL_CPTAV3Set01" Relationship="ZIXX_ILC_PTACC_SRV.MATNR_CPTAV3_ASOC" FromRole="FromRole_MATNR_CPTAV3_ASOC" ToRole="ToRole_MATNR_CPTAV3_ASOC"/>
             </EntityType>
             <EntityType Name="T001" sap:content-version="1">
                 <Key>
@@ -127,7 +129,6 @@
                 <Property Name="EBELP" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Item"/>
                 <Property Name="MATNR" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Material"/>
                 <Property Name="STATUS" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="STATUS"/>
-                <Property Name="ICONO_ESTADO" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="ICONO_ESTADO"/>
                 <Property Name="ISSUE_DES" Type="Edm.String" sap:unicode="false" sap:label="ISSUE_DES"/>
                 <Property Name="ACT_PLA_NEX_STE" Type="Edm.String" sap:unicode="false" sap:label="ACT_PLA_NEX_STE"/>
                 <Property Name="EXP_RES" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="EXP_RES"/>
@@ -137,6 +138,36 @@
                 <Property Name="AEDAT" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Changed On"/>
                 <Property Name="AEZEIT" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Changed At"/>
                 <Property Name="ERCNAM" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Changed By"/>
+            </EntityType>
+            <EntityType Name="ZV_IXX_IL_CPTAV3" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RBUKRS"/>
+                    <PropertyRef Name="RACCT"/>
+                    <PropertyRef Name="GJAHR"/>
+                    <PropertyRef Name="BELNR"/>
+                    <PropertyRef Name="BUZEI"/>
+                </Key>
+                <Property Name="RBUKRS" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:updatable="false"/>
+                <Property Name="RACCT" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="G/L Account" sap:updatable="false"/>
+                <Property Name="GJAHR" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Fiscal Year" sap:updatable="false"/>
+                <Property Name="BELNR" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Document Number" sap:updatable="false"/>
+                <Property Name="BUZEI" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Item" sap:updatable="false"/>
+                <Property Name="EBELN" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Purchasing Doc."/>
+                <Property Name="EBELP" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Item"/>
+                <Property Name="MATNR" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Material"/>
+                <Property Name="STATUS" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="STATUS"/>
+                <Property Name="ISSUE_DES" Type="Edm.String" sap:unicode="false" sap:label="ISSUE_DES"/>
+                <Property Name="ACT_PLA_NEX_STE" Type="Edm.String" sap:unicode="false" sap:label="ACT_PLA_NEX_STE"/>
+                <Property Name="EXP_RES" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="EXP_RES"/>
+                <Property Name="ERZDT" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date created"/>
+                <Property Name="ERZZT" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Time created"/>
+                <Property Name="ERNAM" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Created By"/>
+                <Property Name="AEDAT" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Changed On"/>
+                <Property Name="AEZEIT" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Changed At"/>
+                <Property Name="ERCNAM" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Changed By"/>
+                <Property Name="LANGU" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Language Key"/>
+                <NavigationProperty Name="ToMatnr" Relationship="ZIXX_ILC_PTACC_SRV.MATNR_CPTAV3_ASOC" FromRole="ToRole_MATNR_CPTAV3_ASOC" ToRole="FromRole_MATNR_CPTAV3_ASOC"/>
+                <NavigationProperty Name="MATNRSet" Relationship="ZIXX_ILC_PTACC_SRV.MATNR_CPTAV3_ASOC" FromRole="ToRole_MATNR_CPTAV3_ASOC" ToRole="FromRole_MATNR_CPTAV3_ASOC"/>
             </EntityType>
             <EntityType Name="ZIXX_ILC_PTACC_VType" sap:label="GRIR configuration" sap:content-version="1">
                 <Key>
@@ -164,15 +195,35 @@
                 <Property Name="aedat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Changed On" sap:quickinfo="Last Changed On"/>
                 <Property Name="aezeit" Type="Edm.Time" Precision="0" sap:label="Time of Change"/>
                 <Property Name="ercnam" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed By" sap:quickinfo="Name of Person Who Changed Object"/>
+                <Property Name="langu" Type="Edm.String" MaxLength="2" sap:label="Language Key" sap:quickinfo="ABAP System Field: Language Key of Text Environment"/>
             </EntityType>
+            <Association Name="MATNR_CPTAV3_ASOC" sap:content-version="1">
+                <End Type="ZIXX_ILC_PTACC_SRV.MATNR" Multiplicity="*" Role="FromRole_MATNR_CPTAV3_ASOC"/>
+                <End Type="ZIXX_ILC_PTACC_SRV.ZV_IXX_IL_CPTAV3" Multiplicity="*" Role="ToRole_MATNR_CPTAV3_ASOC"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_MATNR_CPTAV3_ASOC">
+                        <PropertyRef Name="Spras"/>
+                        <PropertyRef Name="Matnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_MATNR_CPTAV3_ASOC">
+                        <PropertyRef Name="LANGU"/>
+                        <PropertyRef Name="MATNR"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
             <EntityContainer Name="ZIXX_ILC_PTACC_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZIXX_ILC_PTACC_V" EntityType="ZIXX_ILC_PTACC_SRV.ZIXX_ILC_PTACC_VType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZIXX_ILC_PTACCSet" EntityType="ZIXX_ILC_PTACC_SRV.ZIXX_ILC_PTACC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="MATNRSet" EntityType="ZIXX_ILC_PTACC_SRV.MATNR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="T001Set" EntityType="ZIXX_ILC_PTACC_SRV.T001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="SKA1Set" EntityType="ZIXX_ILC_PTACC_SRV.SKA1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="EBELNSet" EntityType="ZIXX_ILC_PTACC_SRV.EKPO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZV_IXX_IL_CPTACCSet" EntityType="ZIXX_ILC_PTACC_SRV.ZV_IXX_IL_CPTACC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
-                <EntitySet Name="ZIXX_ILC_PTACC_V" EntityType="ZIXX_ILC_PTACC_SRV.ZIXX_ILC_PTACC_VType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZV_IXX_IL_CPTAV3Set" EntityType="ZIXX_ILC_PTACC_SRV.ZV_IXX_IL_CPTAV3" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="MATNR_CPTAV3_ASOCSet" Association="ZIXX_ILC_PTACC_SRV.MATNR_CPTAV3_ASOC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="MATNRSet" Role="FromRole_MATNR_CPTAV3_ASOC"/>
+                    <End EntitySet="ZV_IXX_IL_CPTAV3Set" Role="ToRole_MATNR_CPTAV3_ASOC"/>
+                </AssociationSet>
             </EntityContainer>
             <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
             <Annotations Target="ZIXX_ILC_PTACC_SRV.ZIXX_ILC_PTACC_SRV_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">

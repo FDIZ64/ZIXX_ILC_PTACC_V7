@@ -1,56 +1,23 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns:sf="sap.ui.comp.smartfilterbar"
-  xmlns:smartTable="sap.ui.comp.smarttable"
-  controllerName="ext.controller.ListReportExtension">
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:smartField="sap.ui.comp.smartfield">
+
   <Dialog
     id="editDialog"
-    title="Editar Cliente">
-    
-    <VBox class="sapUiSmallMargin">
-    
-      <Label text="Legal entity"/>
-      <Input value="{localModel>/RBUKRS}" width="100%" editable="false"/>
+    title="Editar GRIR configuration"
+    draggable="true"
+    resizable="true">
 
-      <Label text="Account"/>
-      <Input value="{localModel>/RACCT}" width="100%" editable="false"/>
 
-      <Label text="OC"/>
-      <Input value="{localModel>/GJAHR}" width="100%" editable="false"/>
-      <Label text="FI DOC"/>
-      <Input value="{localModel>/BELNR}" width="100%" editable="false"/>
-      <Label text="POS"/>
-      <Input value="{localModel>/BUZEI}" width="100%" editable="false"/>
-      <Label text="OC"/>
-      <Input value="{localModel>/EBELN}" width="100%"/>
-      <Label text="OC"/>
-      <Input value="{localModel>/EBELP}" width="100%"/>
-      <Label text="OC"/>
-      <HBox>
-        <Input
-            id="materialInput"
-            width="200px"
-            value="{localModel>/MATNR}"
-            placeholder="Material" />
-        <Button
-            text="Buscar"
-            press=".onOpenMaterialFilter" />
-      </HBox>
-      <Label text="OC"/>
-      <Input value="{localModel>/STATUS}" width="100%"/>
-      <Label text="OC"/>
-      <Input value="{localModel>/ISSUE_DES}" width="100%"/>
-      <Label text="OC"/>
-      <Input value="{localModel>/ACT_PLA_NEX_STE}" width="100%"/>
-      <Label text="OC"/>
-      <Input value="{localModel>/EXP_RES}" width="100%"/>
-    </VBox>
+      <smartField:SmartField
+        id="sfMaterial"
+        value="{MATNR}"
+        entitySet="ZV_IXX_IL_CPTAV3Set"
+        editable="true"/>
 
-    <endButton>
-      <Button text="Cancelar" press=".onCancelDialog"/>
-    </endButton>
-    <beginButton>
-      <Button text="Guardar" type="Accept" press=".onSaveDialog"/>
-    </beginButton>
+
+
+
   </Dialog>
 </core:FragmentDefinition>

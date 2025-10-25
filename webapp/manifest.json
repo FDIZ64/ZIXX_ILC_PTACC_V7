@@ -53,18 +53,18 @@
           "odataVersion": "2.0"
         }
       },
-      "ZIXX_ILC_PTACC_ANNO_MDL": {
-        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/",
-        "type": "ODataAnnotation",
-        "settings": {
-          "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
-        }
-      },
       "ZI_IXX_ILC_MATNR_VH_CDS_VAN": {
         "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZI_IXX_ILC_MATNR_VH_CDS_VAN',Version='0001')/$value/",
         "type": "ODataAnnotation",
         "settings": {
           "localUri": "localService/MaterialVHService/ZI_IXX_ILC_MATNR_VH_CDS_VAN.xml"
+        }
+      },
+      "ZIXX_ILC_PTACC_ANNO_MDL": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZIXX_ILC_PTACC_ANNO_MDL',Version='0001')/$value/",
+        "type": "ODataAnnotation",
+        "settings": {
+          "localUri": "localService/mainService/ZIXX_ILC_PTACC_ANNO_MDL.xml"
         }
       }
     }
@@ -118,7 +118,7 @@
           "defaultCountMode": "Inline",
           "refreshAfterChange": false,
           "metadataUrlParams": {
-            "sap-value-list": "none"
+            "sap-value-list": "MATNR"
           }
         }
       },
@@ -152,12 +152,12 @@
       "extensions": {
         "sap.ui.viewExtensions": {
           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-            "ResponsiveTableColumnsExtension|ZV_IXX_IL_CPTACCSet": {
+            "ResponsiveTableColumnsExtension|ZV_IXX_IL_CPTAV3Set": {
               "className": "sap.ui.core.Fragment",
               "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableColumns",
               "type": "XML"
             },
-            "ResponsiveTableCellsExtension|ZV_IXX_IL_CPTACCSet": {
+            "ResponsiveTableCellsExtension|ZV_IXX_IL_CPTAV3Set": {
               "className": "sap.ui.core.Fragment",
               "fragmentName": "zixxilcptaccv7.ext.fragment.ResponsiveTableCells",
               "type": "XML"
@@ -169,8 +169,8 @@
           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
             "controllerName": "zixxilcptaccv7.ext.controller.ListReportExtension",
             "sap.ui.generic.app": {
-              "ZV_IXX_IL_CPTACCSet": {
-                "EntitySet": "ZV_IXX_IL_CPTACCSet",
+              "ZV_IXX_IL_CPTAV3Set": {
+                "EntitySet": "ZV_IXX_IL_CPTAV3Set",
                 "Actions": {
                   "Editar": {
                     "id": "EditarButton",
@@ -195,8 +195,8 @@
       "showDraftToggle": false
     },
     "pages": {
-      "ListReport|ZV_IXX_IL_CPTACCSet": {
-        "entitySet": "ZV_IXX_IL_CPTACCSet",
+      "ListReport|ZV_IXX_IL_CPTAV3Set": {
+        "entitySet": "ZV_IXX_IL_CPTAV3Set",
         "component": {
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
@@ -215,8 +215,8 @@
           }
         },
         "pages": {
-          "ObjectPage|ZV_IXX_IL_CPTACCSet": {
-            "entitySet": "ZV_IXX_IL_CPTACCSet",
+          "ObjectPage|ZV_IXX_IL_CPTAV3Set": {
+            "entitySet": "ZV_IXX_IL_CPTAV3Set",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage"

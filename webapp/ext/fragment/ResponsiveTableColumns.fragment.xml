@@ -1,11 +1,5 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
 	xmlns="sap.m">
-	<Column width="50px">
-		<customData>
-			<core:CustomData key="p13nData"
-				value='\{"columnKey": "CustomColumn1", "leadingProperty":"CRITICAL", "columnIndex" : "010"}' />
-		</customData>
-	</Column>
 	<Column width="100px">
 		<Text text="Company Code" />
 		<customData>

@@ -17,10 +17,12 @@ sap.ui.define([
 
             // Clonar datos de la entidad seleccionada
             const oData = Object.assign({}, oContext.getObject());
+            const oDataGlobal = oContext.getObject();
 
             // Crear modelo local temporal
             const oLocalModel = new JSONModel(oData);
             oView.setModel(oLocalModel, "localModel");
+            // oView.setModel(oDataGlobal, "");
 
             // Cargar el fragmento si no está creado
             if (!this._pDialog) {
@@ -36,6 +38,11 @@ sap.ui.define([
                 });
             }
             const oDialog = await this._pDialog;
+
+            var oRow = oEvent.getSource().getParent();
+            var oContext2 = oRow.getBindingContext();
+
+            oDialog.setBindingContext(oContext2);
             oDialog.open();
         },
         onOpenMaterialFilter: function (oEvent) {
@@ -57,6 +64,12 @@ sap.ui.define([
                 }.bind(this));
             }
             this._pMaterialDialog.then(function (oDialog) {
+                debugger;
+                const oModel2 = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/ZI_IXX_ILC_MATNR_VH_CDS/");
+                const oSmartTable = this._oMaterialDialog.byId("sfbMaterials");
+                oSmartTable.setModel(oModel2); // modelo local
+                oSmartTable.setEntitySet("MaterialVH")
+
                 oDialog.open();
             });
 
@@ -143,7 +156,7 @@ sap.ui.define([
             const oLocalData = oView.getModel("localModel").getData();
 
             // Construir path del registro
-            const sPath = oModel.createKey("/ZV_IXX_IL_CPTACCSet", {
+            const sPath = oModel.createKey("/ZV_IXX_IL_CPTAV3Set", {
                 RBUKRS: oLocalData.RBUKRS,
                 RACCT: oLocalData.RACCT,
                 GJAHR: oLocalData.GJAHR,

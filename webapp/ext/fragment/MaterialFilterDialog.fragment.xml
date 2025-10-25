@@ -17,7 +17,7 @@
       <!-- SmartFilterBar para filtrar materiales -->
       <smb:SmartFilterBar
           id="sfbMaterials"
-          entitySet="MATNRSet"
+          entitySet="ZI_IXX_ILC_MATNR_VH"
           persistencyKey="SmartFilterMaterial" 
           enableBasicSearch="true"
           search=".onSearchMaterial"/>
@@ -25,7 +25,7 @@
         <st:SmartTable
                 id="tblMaterials"
                 smartFilterId="sfbMaterials"
-                entitySet="MATNRSet"
+                entitySet="ZI_IXX_ILC_MATNR_VH"
                 tableType="ResponsiveTable"
                 header="Lista de Materiales"
                 showRowCount="true"
